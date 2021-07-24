@@ -16,7 +16,6 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 
 import {useAuth} from "../contexts/AuthContext";
 
-//key::: LS16XJ6XSE895VQE
 import {Fab} from "@material-ui/core"
 import {makeStyles} from "@material-ui/core"
 import {Divider} from "@material-ui/core"
@@ -159,7 +158,7 @@ function Stocks() {
         document.getElementById("maybethis").style.background="white"
         const options={
             method:'GET',
-            url:`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${id}&apikey=LS16XJ6XSE895VQE`
+            url:`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${id}&apikey=<YOUR_KEY_HERE>`
         };
         var teju = await axios.request(options)
         teju = teju.data
@@ -371,7 +370,7 @@ function Stocks() {
     async function setu(tk,name){
         const options={
             method:'GET',
-            url:`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${tk}&apikey=LS16XJ6XSE895VQE`
+            url:`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${tk}&apikey=<Your_Key_here>`
         };
         var teju = await axios.request(options)
         teju = teju.data
